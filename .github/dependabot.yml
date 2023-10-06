@@ -7,22 +7,14 @@ updates:
       day: saturday
       interval: weekly
 
-  # Directory.Build.props
+  # ./Directory.Build.props
   - package-ecosystem: nuget
     directory: /
     open-pull-requests-limit: 5
     schedule:
       interval: daily
     groups:
-      directory.build.props-development-dependencies:
-        dependency-type: development
-        patterns:
-          - "*"
-        update-types:
-          - minor
-          - patch
-      directory.build.props-production-dependencies:
-        dependency-type: production
+      root-nuget-dependencies:
         patterns:
           - "*"
         update-types:
@@ -33,22 +25,14 @@ updates:
         update-types:
           - version-update:semver-major
 
-  # OpenRA.Game
+  # ./OpenRA.Game/OpenRA.Game.csproj
   - package-ecosystem: nuget
     directory: /OpenRA.Game
     open-pull-requests-limit: 5
     schedule:
       interval: daily
     groups:
-      open_ra.game-development-dependencies:
-        dependency-type: development
-        patterns:
-          - "*"
-        update-types:
-          - minor
-          - patch
-      open_ra.game-production-dependencies:
-        dependency-type: production
+      OpenRA.Game-nuget-dependencies:
         patterns:
           - "*"
         update-types:
@@ -59,22 +43,14 @@ updates:
         update-types:
           - version-update:semver-major
 
-    # OpenRA.Mods.Common
+    # ./OpenRA.Mods.Common/OpenRA.Mods.Common.csproj
   - package-ecosystem: nuget
     directory: /OpenRA.Mods.Common
     open-pull-requests-limit: 5
     schedule:
       interval: daily
     groups:
-      open_ra.mods.common-development-dependencies:
-        dependency-type: development
-        patterns:
-          - "*"
-        update-types:
-          - minor
-          - patch
-      open_ra.mods.common-shellroduction-dependencies:
-        dependency-type: production
+      open_ra.OpenRA.Mods.Common-nuget-dependencies:
         patterns:
           - "*"
         update-types:
@@ -85,22 +61,14 @@ updates:
         update-types:
           - version-update:semver-major
 
-    # OpenRA.Platforms.Default
+    # ./OpenRA.Platforms.Default/OpenRA.Platforms.Default.csproj
   - package-ecosystem: nuget
     directory: /OpenRA.Platforms.Default
     open-pull-requests-limit: 5
     schedule:
       interval: daily
     groups:
-      open_ra.platforms.default-development-dependencies:
-        dependency-type: development
-        patterns:
-          - "*"
-        update-types:
-          - minor
-          - patch
-      open_ra.platforms.default-production-dependencies:
-        dependency-type: production
+      open_ra.OpenRA.Platforms.Default-nuget-dependencies:
         patterns:
           - "*"
         update-types:
@@ -111,22 +79,14 @@ updates:
         update-types:
           - version-update:semver-major
 
-    # OpenRA.Test
+    # ./OpenRA.Test/OpenRA.Test.csproj
   - package-ecosystem: nuget
     directory: /OpenRA.Test
     open-pull-requests-limit: 5
     schedule:
       interval: daily
     groups:
-      open_ra.test-development-dependencies:
-        dependency-type: development
-        patterns:
-          - "*"
-        update-types:
-          - minor
-          - patch
-      open_ra.test-production-dependencies:
-        dependency-type: production
+      OpenRA.Test-nuget-dependencies:
         patterns:
           - "*"
         update-types:
@@ -137,22 +97,14 @@ updates:
         update-types:
           - version-update:semver-major
 
-    # OpenRA.WindowsLauncher
+    # ./OpenRA.WindowsLauncher/OpenRA.WindowsLauncher.csproj
   - package-ecosystem: nuget
     directory: /OpenRA.WindowsLauncher
     open-pull-requests-limit: 5
     schedule:
       interval: daily
     groups:
-      open_ra.windows_launcher-development-dependencies:
-        dependency-type: development
-        patterns:
-          - "*"
-        update-types:
-          - minor
-          - patch
-      open_ra.windows_launcher-production-dependencies:
-        dependency-type: production
+      OpenRA.WindowsLauncher-nuget-dependencies:
         patterns:
           - "*"
         update-types:
