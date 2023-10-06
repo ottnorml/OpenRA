@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <RootNamespace>OpenRA</RootNamespace>
   </PropertyGroup>
@@ -7,7 +7,7 @@
     <PackageReference Include="System.Runtime.Loader" Version="4.3.0" />
   </ItemGroup>
   <ItemGroup Condition="'$(MSBuildRuntimeType)'=='Mono'">
-    <PackageReference Include="System.Collections.Immutable" Version="6.0.0" />
+    <PackageReference Include="System.Collections.Immutable" Version="7.0.0" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Linguini.Bundle" Version="0.5.0" />
