@@ -1,0 +1,92 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    open-pull-requests-limit: 5
+    schedule:
+      day: saturday
+      interval: weekly
+
+  # Directory.Build.props
+  - package-ecosystem: nuget
+    directory: /
+    open-pull-requests-limit: 5
+    schedule:
+      interval: daily
+    groups:
+      root-nuget-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
+
+  # OpenRA.Game
+  - package-ecosystem: nuget
+    directory: /OpenRA.Game
+    open-pull-requests-limit: 5
+    schedule:
+      interval: daily
+    groups:
+      open_ra.game-nuget-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
+
+    # OpenRA.Mods.Common
+  - package-ecosystem: nuget
+    directory: /OpenRA.Mods.Common
+    open-pull-requests-limit: 5
+    schedule:
+      interval: daily
+    groups:
+      open_ra.mods.common-nuget-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
+
+    # OpenRA.Platforms.Default
+  - package-ecosystem: nuget
+    directory: /OpenRA.Platforms.Default
+    open-pull-requests-limit: 5
+    schedule:
+      interval: daily
+    groups:
+      open_ra.platforms.default-nuget-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
+
+    # OpenRA.Test
+  - package-ecosystem: nuget
+    directory: /OpenRA.Test
+    open-pull-requests-limit: 5
+    schedule:
+      interval: daily
+    groups:
+      open_ra.test-nuget-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
+
+    # OpenRA.WindowsLauncher
+  - package-ecosystem: nuget
+    directory: /OpenRA.WindowsLauncher
+    open-pull-requests-limit: 5
+    schedule:
+      interval: daily
+    groups:
+      open_ra.windows_launcher-nuget-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
