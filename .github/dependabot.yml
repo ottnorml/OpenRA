@@ -14,10 +14,10 @@ updates:
     groups:
       major-updates:
         update-types:
-          - "major"
+          - major
       minor-updates:
         update-types:
-          - "minor"
+          - minor
       patch-updates:
         update-types:
-          - "patch"
+          - patch
