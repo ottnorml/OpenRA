@@ -1,0 +1,24 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    open-pull-requests-limit: 5
+    schedule:
+      day: saturday
+      interval: weekly
+
+  - package-ecosystem: nuget
+    directory: /
+    open-pull-requests-limit: 5
+    schedule:
+      interval: daily
+    groups:
+      major-updates:
+        update-types:
+          - major
+      minor-updates:
+        update-types:
+          - minor
+      patch-updates:
+        update-types:
+          - patch
